@@ -1,10 +1,10 @@
-#LibHandler Library
+# LibHandler Library
 
-##Overview
+## Overview
 
 LibHandler is a robust library for managing torrent downloads in a .NET environment. It provides an interface to control torrent sessions, prioritize files, and handle streaming of incomplete files seamlessly. The library is built with multithreading safety and includes mechanisms for metadata subscription, file prioritization, and session management.
 
-##Features
+## Features
 
 Add torrents: Add new torrents using magnet links or file URLs.
 
@@ -18,17 +18,17 @@ Session management: Save and restore torrent sessions to persist state.
 
 Periodic updates: Automatically updates metadata and session state every second.
 
-##Installation
+## Installation
 
 Include the library in your .NET project. You can download the source code from this repository and compile it, or use the precompiled DLL (if available).
 
-###Getting Started
+### Getting Started
 
 Here is a quick example to demonstrate how to use LibHandler in your project.
 
 Example Usage
 
-```C#
+```c#
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -69,13 +69,15 @@ class Program
         // Stop the session
         libSession.StopTorrent(handler);
     }
-}```
+}
+```
 
-##API Documentation
 
-###Classes and Methods
+## API Documentation
 
-####LibHandler
+### Classes and Methods
+
+#### LibHandler
 
 Constructor: LibHandler(string id, LibSessionWrapper session, TorrentConfig config, LibHandlerWrapper handler)
 
@@ -95,7 +97,7 @@ Methods:
 
 - Task StopSession() - Stops the torrent session.
 
-####LibSession
+#### LibSession
 
 Constructor: LibSession()
 
@@ -105,12 +107,12 @@ Methods:
 - void StopTorrent(LibHandler manager) - Stops a specific torrent.
 - void Dispose() - Cleans up the session and saves the state.
 
-###Contributing
+### Contributing
 
 Contributions are welcome! Feel free to submit issues and pull requests to improve the library.
 For developing, developer needs to setup vcpkg with visual studio and install libtorrent. This package is aimed to 
 support only the windows versions of the application. 
 
-###License
+### License
 
 This project is licensed under the MIT License. See the LICENSE file for details
