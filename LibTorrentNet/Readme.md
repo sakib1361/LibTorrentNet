@@ -1,4 +1,4 @@
-﻿#LibHandler Library
+#LibHandler Library
 
 ##Overview
 
