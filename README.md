@@ -2,8 +2,7 @@
 
 ## Overview
 
-LibHandler is a robust library for managing torrent downloads in a .NET environment. It provides an interface to control torrent sessions, prioritize files, and handle streaming of incomplete files seamlessly. The library is built with multithreading safety and includes mechanisms for metadata subscription, file prioritization, and session management.
-
+LibHandler is a Windows C++ libtorrent binding library for managing torrent downloads in a .NET environment. It provides an interface to control torrent sessions, prioritize files, and handle streaming of incomplete files seamlessly. The library is built with multithreading safety and includes mechanisms for metadata subscription, file prioritization, and session management.
 ## Features
 
 Add torrents: Add new torrents using magnet links or file URLs.
