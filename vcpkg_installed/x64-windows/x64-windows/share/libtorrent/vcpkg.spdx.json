@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/libtorrent-x64-windows-2.0.10-c97e5721-3f0e-4f59-b8d1-81a324c6e44e",
+  "name": "libtorrent:x64-windows@2.0.10 fa3f2a783ae4c7819334ee2ae85b653828aead3115291464f787c9d57fd3c9e8",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-09-30-ab8988503c7cffabfd440b243a383c0a352a023d"
+    ],
+    "created": "2024-10-22T04:46:22Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "libtorrent",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2.0.10",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@53949de9ace82d74179d388d9cd26f164a823657",
+      "homepage": "https://libtorrent.org",
+      "licenseConcluded": "BSD-2-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "An efficient feature complete C++ BitTorrent implementation",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "libtorrent:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "fa3f2a783ae4c7819334ee2ae85b653828aead3115291464f787c9d57fd3c9e8",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-2-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "arvidn/libtorrent",
+      "downloadLocation": "git+https://github.com/arvidn/libtorrent@v2.0.10",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "fb55b04b57a6a1f39b81a4aff2ca899f9ac30b435c278c80181bdd3fef4775a3f91b2345c49b493503ae79ef89841e9a965af9974abe9022be3050922a4057f0"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/Shadman/AppData/Local/vcpkg/registries/git-trees/53949de9ace82d74179d388d9cd26f164a823657/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b06c36d3e3b0472cae68167a22e86a6e4c7c2baf5610f0a97ebb27bd5c3f2e0c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/Shadman/AppData/Local/vcpkg/registries/git-trees/53949de9ace82d74179d388d9cd26f164a823657/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3d2caabfc35c019ae7d5bfc81a604a46fb99b1681ca961bf97573c38d05ce0db"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

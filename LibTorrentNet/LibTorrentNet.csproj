@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<Platforms>x64</Platforms>
+
+		<Version>1.0.0</Version>
+		<Authors>Shadman Sakib</Authors>
+		<Company>Personal</Company>
+		<Description>Mac bindings required to use from .net projects</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\LibTorrentWrapper\LibTorrentWrapper.vcxproj" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<ContentWithTargetPath Include="..\vcpkg_installed\x64-windows\x64-windows\debug\bin\*.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>%(Filename)%(Extension)</TargetPath>
+		</ContentWithTargetPath>
+	</ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+		<ContentWithTargetPath Include="..\vcpkg_installed\x64-windows\x64-windows\bin\*.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>%(Filename)%(Extension)</TargetPath>
+		</ContentWithTargetPath>
+	</ItemGroup>
+</Project>

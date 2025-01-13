@@ -1,0 +1,10 @@
+Package: libtorrent
+Version: 2.0.10
+Depends: boost-asio, boost-chrono, boost-config, boost-crc, boost-date-time, boost-iterator, boost-logic, boost-multi-index, boost-multiprecision, boost-pool, boost-random, boost-scope-exit, boost-system, boost-variant, openssl, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Maintainer: Arvid Norberg <arvid.norberg@gmail.com>
+Abi: fa3f2a783ae4c7819334ee2ae85b653828aead3115291464f787c9d57fd3c9e8
+Description: An efficient feature complete C++ BitTorrent implementation
+Default-Features: iconv
+Status: install ok installed

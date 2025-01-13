@@ -1,0 +1,9 @@
+Package: boost-ratio
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ddcc01ecd818380c112416d684fb970619cc0b49ffe4f8fdf7213f628167d069
+Description: Boost ratio module
+Status: install ok installed

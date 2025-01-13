@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    {
+      "name": "libtorrent",
+      "default-features": false
+    }
+  ]
+}

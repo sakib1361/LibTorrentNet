@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibTorrentNet", "LibTorrentNet\LibTorrentNet.csproj", "{8601D7D7-E75B-4758-AB00-60C7535F1B86}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibTorrentWrapper", "LibTorrentWrapper\LibTorrentWrapper.vcxproj", "{1F5F34F5-BC6E-469D-B555-DC7ECAF1A614}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8601D7D7-E75B-4758-AB00-60C7535F1B86}.Debug|x64.ActiveCfg = Debug|x64
+		{8601D7D7-E75B-4758-AB00-60C7535F1B86}.Debug|x64.Build.0 = Debug|x64
+		{8601D7D7-E75B-4758-AB00-60C7535F1B86}.Release|x64.ActiveCfg = Release|x64
+		{8601D7D7-E75B-4758-AB00-60C7535F1B86}.Release|x64.Build.0 = Release|x64
+		{1F5F34F5-BC6E-469D-B555-DC7ECAF1A614}.Debug|x64.ActiveCfg = Debug|x64
+		{1F5F34F5-BC6E-469D-B555-DC7ECAF1A614}.Debug|x64.Build.0 = Debug|x64
+		{1F5F34F5-BC6E-469D-B555-DC7ECAF1A614}.Release|x64.ActiveCfg = Release|x64
+		{1F5F34F5-BC6E-469D-B555-DC7ECAF1A614}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

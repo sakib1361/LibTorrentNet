@@ -1,0 +1,9 @@
+Package: boost-context
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-mp11, boost-pool, boost-predef, boost-smart-ptr
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a619a80b2eaca9bfd1c62c757505c10b727750807c3af023facc71052a884d34
+Description: Boost context module
+Status: install ok half-installed
