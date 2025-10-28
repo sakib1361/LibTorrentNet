@@ -67,7 +67,6 @@ namespace LibTorrentNet
         {
             _timer.Stop();
             _timer.Dispose();
-            await Task.Delay(100);
             foreach (var handler in _handlers.Values)
             {
                 await handler.StopSession();
@@ -75,7 +74,7 @@ namespace LibTorrentNet
             _session.Dispose();
         }
 
-        public async void StopTorrent(LibHandler manager)
+        public async Task StopTorrent(LibHandler manager)
         {
             if (_handlers.Remove(manager.Id))
             {

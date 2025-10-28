@@ -13,7 +13,7 @@ namespace LibTorrentNet
         private Stream stream;
         private bool _fileLocked;
         private TorrentFileInfo _currentFile;
-        private SemaphoreSlim slim = new SemaphoreSlim(1);
+        private readonly SemaphoreSlim slim = new(1);
         public async Task<TorrentData> GetMetaData()
         {
             await slim.WaitAsync();
@@ -30,14 +30,18 @@ namespace LibTorrentNet
 
         public async void SetHighPriority(TorrentFileInfo fileInfos)
         {
+            if(_stopped) return;
             await slim.WaitAsync();
             if (_stopped == false)
+            {
                 handler.SetHighPriority([fileInfos.Index]);
+            }
             slim.Release();
         }
 
         public async Task EnsureDownloads(TorrentFileInfo[] fileInfos)
         {
+            if(_stopped) return;
             var indexes = fileInfos.Select(x => x.Index).ToArray();
             await slim.WaitAsync();
             handler.SetHighPriority(indexes);
@@ -63,12 +67,15 @@ namespace LibTorrentNet
 
         public async Task<TorrentFileCollection> GetFileCollectionAsync()
         {
-            fileCol = await Task.Run(() => handler.GetTorrentFiles());
+            if (_stopped) return null;
+            fileCol = await Task.Run(handler.GetTorrentFiles);
             return fileCol;
         }
 
         public async Task<Stream> InitializeStream(TorrentFileInfo info)
         {
+            if (_stopped) return null;
+
             if (fileCol == null) await GetFileCollectionAsync();
             if (fileCol == null) return null;
 
@@ -102,16 +109,18 @@ namespace LibTorrentNet
             _stopped = true;
             stream?.Dispose();
             stream = null;
+            await slim.WaitAsync();
             try
             {
-                await Task.Run(handler.PauseTorrent).ConfigureAwait(false);
-                await Task.Run(() => session.SaveSession(handler)).ConfigureAwait(false);
+                handler.PauseTorrent();
+                session.SaveSession(handler);
                 handler.Dispose();
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }
+            slim.Release();
         }
 
         public void SubscribeMeta(Action<TorrentData> callback)
